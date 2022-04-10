@@ -53,7 +53,7 @@
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td class="auto-style3">
-                    <asp:Button ID="Login_ID" runat="server" Text="Login" />
+                    <asp:Button ID="Login_ID" runat="server" Text="Login" OnClick="Login_ID_Click" />
                     <input id="Reset1" type="reset" value="Reset" /></td>
                 <td>
                     <asp:HyperLink ID="HyperLink1" runat="server">Registration</asp:HyperLink>
