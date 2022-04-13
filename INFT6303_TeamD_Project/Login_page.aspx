@@ -53,6 +53,14 @@
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td class="auto-style3">
+                    <asp:Label ID="Label1" runat="server"></asp:Label>
+                </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style3">
                     <asp:Button ID="Login_ID" runat="server" Text="Login" OnClick="Login_ID_Click" />
                     <input id="Reset1" type="reset" value="Reset" /></td>
                 <td>

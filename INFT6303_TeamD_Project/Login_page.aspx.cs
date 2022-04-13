@@ -13,7 +13,10 @@ namespace INFT6303_TeamD_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["New"] != null)
+            {
+                Response.Redirect("userinfo.aspx");
+            }
         }
 
         protected void Login_ID_Click(object sender, EventArgs e)
@@ -21,31 +24,39 @@ namespace INFT6303_TeamD_Project
             if (Session["New"] == null)
             {
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-                conn.Open();
-                int flg = 0;
-                string query = "select * from [Admin]";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                SqlDataReader rd = cmd.ExecuteReader();
-                while (rd.Read())
+                try
                 {
-                    if (string.Equals(email_textbox.Text.ToString().Replace(" ", ""), rd["Username"].ToString().Replace(" ", "")))
+                    conn.Open();
+                    string qry = "";
+                    if (DropDownList1.SelectedValue == "Admin")
+                        qry = "SELECT * FROM Admin WHERE Username='" + email_textbox.Text.Replace(" ", "") + "' AND Password='" + password_textbox.Text.Replace(" ", "") + "'";
+                    else if (DropDownList1.SelectedValue == "Faculty")
+                        qry = "SELECT * FROM Faculty WHERE email_id='" + email_textbox.Text.Replace(" ", "") + "' AND password='" + password_textbox.Text.Replace(" ", "") + "'";
+                    else
+                        qry = "SELECT * FROM Student WHERE email_id='" + email_textbox.Text.Replace(" ", "") + "' AND password='" + password_textbox.Text.Replace(" ", "") + "'";
+                    SqlCommand cmd = new SqlCommand(qry, conn);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    if (sdr.Read())
                     {
-                        if (string.Equals(password_textbox.Text.ToString().Replace(" ", ""), rd["Password"].ToString().Replace(" ", "")))
-                        {
-                            Response.Write("Login Successfull");
-                            flg = 1;
-                            Session["New"] = password_textbox.Text;
-                            Response.Redirect("WebForm1.aspx");
-                            break;
-                        }
+                        Response.Redirect("WebForm1.aspx");
                     }
+                    else
+                    {
+                        Label1.Text = "* username and password are incorrect";
+                        Label1.ForeColor = System.Drawing.Color.Red;
+                    }
+                    conn.Close();
                 }
-                conn.Close();
-                if (flg == 0)
-                    Response.Write("Error in Authentication");
+                catch (Exception ex)
+                {
+                    Response.Write(ex.Message);
+                }
             }
             else
-                Response.Redirect("Login_page.aspx");
+            {
+                Response.Redirect("WebForm1.aspx");
+            }
+
         }
     }
 }

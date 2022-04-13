@@ -11,7 +11,10 @@ namespace INFT6303_TeamD_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["New"] == null)
+            {
+                Response.Redirect("Login_page.aspx");
+            }
         }
     }
 }
