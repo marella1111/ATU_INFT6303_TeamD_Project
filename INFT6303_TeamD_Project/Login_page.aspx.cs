@@ -15,7 +15,7 @@ namespace INFT6303_TeamD_Project
         {
             if (Session["New"] != null)
             {
-                Response.Redirect("userinfo.aspx");
+                Response.Redirect("WebForm1.aspx");
             }
         }
 

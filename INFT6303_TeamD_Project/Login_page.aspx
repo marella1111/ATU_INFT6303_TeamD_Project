@@ -64,7 +64,7 @@
                     <asp:Button ID="Login_ID" runat="server" Text="Login" OnClick="Login_ID_Click" />
                     <input id="Reset1" type="reset" value="Reset" /></td>
                 <td>
-                    <asp:HyperLink ID="HyperLink1" runat="server">Registration</asp:HyperLink>
+                    <asp:LinkButton ID="LinkButton1" runat="server" href="Registration.aspx">Registration</asp:LinkButton>
                 </td>
             </tr>
             <tr>
