@@ -16,5 +16,14 @@ namespace INFT6303_TeamD_Project
                 Response.Redirect("Login_page.aspx");
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (Session["New"] != null)
+            {
+                Session["New"] = null;
+                Response.Redirect("Login_page.aspx");
+            }
+        }
     }
 }

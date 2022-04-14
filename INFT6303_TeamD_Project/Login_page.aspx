@@ -1,24 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login_page.aspx.cs" Inherits="INFT6303_TeamD_Project.Login_page" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login_page.aspx.cs" Inherits="INFT6303_TeamD_Project.Login_page" MasterPageFile="~/MasterPage.Master" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            width: 199px;
-        }
-        .auto-style3 {
-            width: 348px;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <table class="auto-style1">
             <tr>
                 <td class="auto-style2">&nbsp;</td>
@@ -75,6 +57,4 @@
         </table>
         <div>
         </div>
-    </form>
-</body>
-</html>
+ </asp:Content>   

@@ -38,6 +38,7 @@ namespace INFT6303_TeamD_Project
                     SqlDataReader sdr = cmd.ExecuteReader();
                     if (sdr.Read())
                     {
+                        Session["New"] = sdr.GetValue(0).ToString();
                         Response.Redirect("WebForm1.aspx");
                     }
                     else
