@@ -13,9 +13,17 @@ namespace INFT6303_TeamD_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["New"] != null)
+            if (Session["New"] != null && string.Equals(Session["Role"], "Admin"))
             {
-                Response.Redirect("WebForm1.aspx");
+                Response.Redirect("Admin.aspx");
+            }
+            else if (Session["New"] != null && string.Equals(Session["Role"], "Faculty"))
+            {
+                Response.Redirect("Faculty.aspx");
+            }
+            else if (Session["New"] != null && string.Equals(Session["Role"], "Student"))
+            {
+                Response.Redirect("Student.aspx");
             }
         }
 
@@ -38,8 +46,14 @@ namespace INFT6303_TeamD_Project
                     SqlDataReader sdr = cmd.ExecuteReader();
                     if (sdr.Read())
                     {
-                        Session["New"] = sdr.GetValue(0).ToString();
-                        Response.Redirect("WebForm1.aspx");
+                        Session["New"] = sdr.GetValue(2).ToString();
+                        Session["Role"]= DropDownList1.SelectedValue;
+                        if (string.Equals(Session["Role"], "Admin"))
+                            Response.Redirect("Admin.aspx");
+                        else if (string.Equals(Session["Role"], "Faculty"))
+                            Response.Redirect("Faculty.aspx");
+                        else
+                            Response.Redirect("Student.aspx");
                     }
                     else
                     {

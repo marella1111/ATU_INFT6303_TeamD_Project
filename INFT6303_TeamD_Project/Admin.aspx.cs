@@ -11,7 +11,32 @@ namespace INFT6303_TeamD_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["New"] == null)
+            {
+                Response.Redirect("Login_page.aspx");
+            }
+            else if (Session["New"] != null && string.Equals(Session["Role"], "Faculty"))
+            {
+                Response.Redirect("Faculty.aspx");
+            }
+            else if(Session["New"] != null && string.Equals(Session["Role"], "Student"))
+            {
+                Response.Redirect("Student.aspx");
+            }
+            else
+            {
+                Label1.Text = Session["New"].ToString();
+                Label2.Text = Session["Role"].ToString();
+            }
+        }
 
+        protected void btn_logout_Click(object sender, EventArgs e)
+        {
+            if (Session["New"] != null)
+            {
+                Session["New"] = null;
+                Response.Redirect("Login_page.aspx");
+            }
         }
     }
 }
