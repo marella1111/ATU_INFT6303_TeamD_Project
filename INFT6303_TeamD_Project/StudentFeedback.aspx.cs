@@ -34,7 +34,7 @@ namespace INFT6303_TeamD_Project
                     try
                     {
                         conn.Open();
-                        string query = "select * from Course";
+                        string query = "select * from Course where department='"+Session["Department"].ToString().Trim()+"'";
                         SqlCommand cmd = new SqlCommand(query, conn);
 
                         DropDownList1.DataTextField = "course_name";

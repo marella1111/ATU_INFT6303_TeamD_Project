@@ -52,15 +52,15 @@ namespace INFT6303_TeamD_Project
                             Response.Redirect("Admin.aspx");
                         else if (string.Equals(Session["Role"], "Faculty"))
                         {
-                            Response.Redirect("Faculty.aspx");
                             Session["Name"] = sdr.GetValue(2).ToString();
                             Session["Department"] = sdr.GetValue(6).ToString();
+                            Response.Redirect("Faculty.aspx");
                         }
                         else
                         {
-                            Response.Redirect("Student.aspx");
                             Session["Name"] = sdr.GetValue(2).ToString();
-                            Session["Department"] = sdr.GetValue(6).ToString(); 
+                            Session["Department"] = sdr.GetValue(6).ToString();
+                            Response.Redirect("Student.aspx");
                         }
                     }
                     else
