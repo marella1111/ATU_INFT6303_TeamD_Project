@@ -77,6 +77,10 @@
     <Content Include="Global.asax" />
     <Content Include="Login_page.aspx" />
     <Content Include="Registration.aspx" />
+    <Content Include="StudentFeedback.aspx" />
+    <Content Include="Studentlist.aspx" />
+    <Content Include="StudentProfile.aspx" />
+    <Content Include="StudentUpdate.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
     <Content Include="Student.aspx" />
@@ -120,6 +124,34 @@
     </Compile>
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentFeedback.aspx.cs">
+      <DependentUpon>StudentFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentFeedback.aspx.designer.cs">
+      <DependentUpon>StudentFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Studentlist.aspx.cs">
+      <DependentUpon>Studentlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Studentlist.aspx.designer.cs">
+      <DependentUpon>Studentlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentProfile.aspx.cs">
+      <DependentUpon>StudentProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentProfile.aspx.designer.cs">
+      <DependentUpon>StudentProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentUpdate.aspx.cs">
+      <DependentUpon>StudentUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentUpdate.aspx.designer.cs">
+      <DependentUpon>StudentUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

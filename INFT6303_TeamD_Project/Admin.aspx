@@ -13,7 +13,7 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link">Student</a>
+                        <a class="nav-link" href="Studentlist.aspx">Student</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Faculty</a>
