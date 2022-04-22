@@ -74,6 +74,9 @@
     </Content>
     <Content Include="Css\style.css" />
     <Content Include="Faculty.aspx" />
+    <Content Include="FacultyFeedback.aspx" />
+    <Content Include="FacultyProfile.aspx" />
+    <Content Include="FacultyUpdate.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login_page.aspx" />
     <Content Include="Registration.aspx" />
@@ -99,6 +102,27 @@
     </Compile>
     <Compile Include="Faculty.aspx.designer.cs">
       <DependentUpon>Faculty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyFeedback.aspx.cs">
+      <DependentUpon>FacultyFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FacultyFeedback.aspx.designer.cs">
+      <DependentUpon>FacultyFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyProfile.aspx.cs">
+      <DependentUpon>FacultyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FacultyProfile.aspx.designer.cs">
+      <DependentUpon>FacultyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyUpdate.aspx.cs">
+      <DependentUpon>FacultyUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FacultyUpdate.aspx.designer.cs">
+      <DependentUpon>FacultyUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
