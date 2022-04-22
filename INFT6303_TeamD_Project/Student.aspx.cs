@@ -25,6 +25,17 @@ namespace INFT6303_TeamD_Project
             }
             else
             {
+                Label1.Text = Session["New"].ToString();
+                Label2.Text = Session["Role"].ToString();
+            }
+        }
+
+        protected void btn_logout_Click(object sender, EventArgs e)
+        {
+            if (Session["New"] != null)
+            {
+                Session["New"] = null;
+                Response.Redirect("Login_page.aspx");
             }
         }
     }

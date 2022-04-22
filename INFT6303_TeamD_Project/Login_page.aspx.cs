@@ -46,7 +46,7 @@ namespace INFT6303_TeamD_Project
                     SqlDataReader sdr = cmd.ExecuteReader();
                     if (sdr.Read())
                     {
-                        Session["New"] = sdr.GetValue(2).ToString();
+                        Session["New"] = sdr.GetValue(1).ToString();
                         Session["Role"]= DropDownList1.SelectedValue;
                         if (string.Equals(Session["Role"], "Admin"))
                             Response.Redirect("Admin.aspx");
