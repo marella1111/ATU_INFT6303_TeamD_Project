@@ -78,7 +78,7 @@ namespace INFT6303_TeamD_Project
             else
             {
                 Label1.Visible = false;
-                Label1.Visible = false;
+                Label2.Visible = false;
                 conn.Open();
                 var selected = ListBox1.GetSelectedIndices().ToList();
                 var selectedValues = (from c in selected

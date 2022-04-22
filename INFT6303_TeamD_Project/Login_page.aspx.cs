@@ -51,9 +51,17 @@ namespace INFT6303_TeamD_Project
                         if (string.Equals(Session["Role"], "Admin"))
                             Response.Redirect("Admin.aspx");
                         else if (string.Equals(Session["Role"], "Faculty"))
+                        {
                             Response.Redirect("Faculty.aspx");
+                            Session["Name"] = sdr.GetValue(2).ToString();
+                            Session["Department"] = sdr.GetValue(6).ToString();
+                        }
                         else
+                        {
                             Response.Redirect("Student.aspx");
+                            Session["Name"] = sdr.GetValue(2).ToString();
+                            Session["Department"] = sdr.GetValue(6).ToString(); 
+                        }
                     }
                     else
                     {
