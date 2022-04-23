@@ -92,6 +92,8 @@
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style6">
                 <asp:Button ID="Btn_submit" runat="server" OnClick="Btn_submit_Click" Text="Submit" />
+                &nbsp;
+                <asp:Button ID="Btn_back" runat="server" Text="Back" OnClientClick="JavaScript: window.history.back(1); return false;"/>
             </td>
             <td>
                 &nbsp;</td>

@@ -38,13 +38,13 @@ namespace INFT6303_TeamD_Project
                     SqlDataReader sdr = cmd.ExecuteReader();
                     if (sdr.Read())
                     {
-                       Label1.Text= Session["New"].ToString();
+                       Label1.Text= Session["Name"].ToString();
                        Label2.Text= sdr.GetValue(1).ToString();
                        Label3.Text= sdr.GetValue(3).ToString();
                        Label4.Text=sdr.GetValue(5).ToString();
                        Label5.Text=sdr.GetValue(4).ToString();
-                       Label6.Text= sdr.GetValue(7).ToString();
-                       Label7.Text=sdr.GetValue(8).ToString();
+                       Label6.Text= sdr.GetValue(6).ToString();
+                       Label7.Text=sdr.GetValue(7).ToString();
                     }
                     conn.Close();
                 }
@@ -58,6 +58,11 @@ namespace INFT6303_TeamD_Project
         protected void btn_update_Click(object sender, EventArgs e)
         {
             Response.Redirect("StudentUpdate.aspx");
+        }
+
+        protected void Btn_back_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Student.aspx");
         }
     }
 }

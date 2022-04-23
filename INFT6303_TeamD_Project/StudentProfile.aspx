@@ -27,6 +27,9 @@
 <div class="card" style="width: 50rem;">
   <div class="card-body">
       <asp:Button ID="btn_update" runat="server" Text="Update Profile" class="btn btn-primary" OnClick="btn_update_Click" />
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <asp:Button ID="Btn_back" runat="server" Text="Back" class="btn btn-primary" OnClick="Btn_back_Click" />
+&nbsp;
   </div>
 </div>
 </asp:Content>

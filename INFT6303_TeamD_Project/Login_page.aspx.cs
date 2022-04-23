@@ -53,13 +53,13 @@ namespace INFT6303_TeamD_Project
                         else if (string.Equals(Session["Role"], "Faculty"))
                         {
                             Session["Name"] = sdr.GetValue(2).ToString();
-                            Session["Department"] = sdr.GetValue(6).ToString();
+                            Session["Courses"] = sdr.GetValue(7).ToString();
                             Response.Redirect("Faculty.aspx");
                         }
                         else
                         {
                             Session["Name"] = sdr.GetValue(2).ToString();
-                            Session["Department"] = sdr.GetValue(6).ToString();
+                            Session["Courses"] = sdr.GetValue(7).ToString();
                             Response.Redirect("Student.aspx");
                         }
                     }

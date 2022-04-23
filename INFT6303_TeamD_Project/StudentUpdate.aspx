@@ -106,7 +106,8 @@
                 <td>&nbsp;</td>
                 <td class="auto-style5">
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" />
-                    <asp:Button ID="Button2" runat="server" Text="Back" />
+                    &nbsp;
+                    <asp:Button ID="Button2" runat="server" Text="Back" OnClientClick="JavaScript: window.history.back(1); return false;" />
                 </td>
                 <td>&nbsp;</td>
             </tr>
