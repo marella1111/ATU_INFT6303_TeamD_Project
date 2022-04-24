@@ -16,7 +16,7 @@
                         <a class="nav-link" href="FacultyProfile.aspx">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="FacultyFeedback.aspx">Feedback</a>
+                        <a class="nav-link" href="FacultyFeedbackForm.aspx">Feedback</a>
                     </li>
                     <li class="nav-item" style="right: -10px; position: absolute; bottom: 10px;">
                         <asp:Button ID="btn_logout" runat="server" Text="Log Out" OnClick="btn_logout_Click" />
