@@ -79,6 +79,7 @@
     <Content Include="Css\style.css" />
     <Content Include="Faculty.aspx" />
     <Content Include="FacultyFeedback.aspx" />
+    <Content Include="FacultyFeedbackForm.aspx" />
     <Content Include="FacultyList.aspx" />
     <Content Include="FacultyProfile.aspx" />
     <Content Include="FacultyRegistration.aspx" />
@@ -144,6 +145,13 @@
     </Compile>
     <Compile Include="FacultyFeedback.aspx.designer.cs">
       <DependentUpon>FacultyFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyFeedbackForm.aspx.cs">
+      <DependentUpon>FacultyFeedbackForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FacultyFeedbackForm.aspx.designer.cs">
+      <DependentUpon>FacultyFeedbackForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="FacultyList.aspx.cs">
       <DependentUpon>FacultyList.aspx</DependentUpon>
