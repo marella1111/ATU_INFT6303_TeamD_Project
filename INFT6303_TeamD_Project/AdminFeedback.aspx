@@ -4,11 +4,11 @@
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource2" ForeColor="#333333" GridLines="None">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
-            <asp:BoundField DataField="q1" HeaderText="q1" SortExpression="q1" />
-            <asp:BoundField DataField="q2" HeaderText="q2" SortExpression="q2" />
-            <asp:BoundField DataField="q3" HeaderText="q3" SortExpression="q3" />
-            <asp:BoundField DataField="q4" HeaderText="q4" SortExpression="q4" />
-            <asp:BoundField DataField="q5" HeaderText="q5" SortExpression="q5" />
+            <asp:BoundField DataField="Teacher is good at explaining the subject matter" HeaderText="Teacher is good at explaining the subject matter" SortExpression="Teacher is good at explaining the subject matter" />
+            <asp:BoundField DataField="Teacher is good at using innovative methods/ways" HeaderText="Teacher is good at using innovative methods/ways" SortExpression="Teacher is good at using innovative methods/ways" />
+            <asp:BoundField DataField="Teacher is good at stimulating the interest in the course content" HeaderText="Teacher is good at stimulating the interest in the course content" SortExpression="Teacher is good at stimulating the interest in the course content" />
+            <asp:BoundField DataField="Teacher is available and helpful during course hours" HeaderText="Teacher is available and helpful during course hours" SortExpression="Teacher is available and helpful during course hours" />
+            <asp:BoundField DataField="Teacher has completed the whole course as per outline" HeaderText="Teacher has completed the whole course as per outline" SortExpression="Teacher has completed the whole course as per outline" />
         </Columns>
         <EditRowStyle BackColor="#2461BF" />
         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -22,7 +22,7 @@
         <SortedDescendingHeaderStyle BackColor="#4870BE" />
     </asp:GridView>
     
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [q1], [q2], [q3], [q4], [q5] FROM [Feedback] WHERE ([course_id] = @course_id)">
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [q1] AS 'Teacher is good at explaining the subject matter', [q2] AS 'Teacher is good at using innovative methods/ways', [q3] AS 'Teacher is good at stimulating the interest in the course content', [q4] AS 'Teacher is available and helpful during course hours', [q5] AS 'Teacher has completed the whole course as per outline' FROM [Feedback] WHERE ([course_id] = @course_id)">
         <SelectParameters>
             <asp:SessionParameter Name="course_id" SessionField="cid" Type="String" />
         </SelectParameters>
