@@ -28,6 +28,8 @@ namespace INFT6303_TeamD_Project
             }
             else
             {
+                Label1.Text = Session["Name"].ToString();
+                Label2.Text = Session["Role"].ToString();
                 if (!IsPostBack)
                 {
                     DropDownList2.DataSource = Session["Courses"].ToString().Split(',');
@@ -55,6 +57,15 @@ namespace INFT6303_TeamD_Project
             catch (Exception ex)
             {
                 Response.Write(ex.Message);
+            }
+        }
+
+        protected void btn_logout_Click(object sender, EventArgs e)
+        {
+            if (Session["New"] != null)
+            {
+                Session["New"] = null;
+                Response.Redirect("Login_page.aspx");
             }
         }
     }

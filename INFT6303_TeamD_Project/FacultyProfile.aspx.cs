@@ -28,6 +28,8 @@ namespace INFT6303_TeamD_Project
             }
             else
             {
+                Label8.Text = Session["Name"].ToString();
+                Label9.Text = Session["Role"].ToString();
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                 try
                 {
@@ -37,13 +39,13 @@ namespace INFT6303_TeamD_Project
                     SqlDataReader sdr = cmd.ExecuteReader();
                     if (sdr.Read())
                     {
-                        Label1.Text = Session["New"].ToString();
+                        Label1.Text = sdr.GetValue(2).ToString();
                         Label2.Text = sdr.GetValue(1).ToString();
                         Label3.Text = sdr.GetValue(3).ToString();
                         Label4.Text = sdr.GetValue(5).ToString();
                         Label5.Text = sdr.GetValue(4).ToString();
-                        Label6.Text = sdr.GetValue(7).ToString();
-                        Label7.Text = sdr.GetValue(8).ToString();
+                        Label6.Text = sdr.GetValue(6).ToString();
+                        Label7.Text = sdr.GetValue(7).ToString();
                     }
                     conn.Close();
                 }
@@ -58,6 +60,15 @@ namespace INFT6303_TeamD_Project
         protected void btn_update_Click(object sender, EventArgs e)
         {
             Response.Redirect("FacultyUpdate.aspx");
+        }
+
+        protected void btn_logout_Click(object sender, EventArgs e)
+        {
+            if (Session["New"] != null)
+            {
+                Session["New"] = null;
+                Response.Redirect("Login_page.aspx");
+            }
         }
     }
 }
