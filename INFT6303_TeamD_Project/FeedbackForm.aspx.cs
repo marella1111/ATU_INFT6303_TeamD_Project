@@ -27,6 +27,7 @@ namespace INFT6303_TeamD_Project
             }
             else
             {
+                Label2.Text = Session["Role"].ToString();
             }
         }
 
@@ -55,6 +56,15 @@ namespace INFT6303_TeamD_Project
         {
             Session["cid"] = DropDownList2.SelectedValue.ToString().Trim();
             Response.Redirect("AdminFeedback.aspx");
+        }
+
+        protected void btn_logout_Click(object sender, EventArgs e)
+        {
+            if (Session["New"] != null)
+            {
+                Session["New"] = null;
+                Response.Redirect("Login_page.aspx");
+            }
         }
     }
 }

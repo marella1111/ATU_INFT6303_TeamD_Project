@@ -27,6 +27,7 @@ namespace INFT6303_TeamD_Project
             }
             else
             {
+                Label2.Text = Session["Role"].ToString();
             }
         }
 
@@ -73,11 +74,24 @@ namespace INFT6303_TeamD_Project
             {
                 Label1.Visible = false;
                 conn.Open();
-                string query = "INSERT INTO Course (course_id,course_name,department,course_desc,faculty_id) VALUES ('" + txtbox_cid.Text + "','" + txtbox_name.Text + "','" + DropDownList2.SelectedItem.ToString() + "','" + txtbox_desc.Text + "','" + DropDownList1.SelectedItem.ToString() + "')";
+                string query = "INSERT INTO Course (course_id,course_name,department,course_desc) VALUES ('" + txtbox_cid.Text + "','" + txtbox_name.Text + "','" + DropDownList2.SelectedItem.ToString() + "','" + txtbox_desc.Text + "')";
                 SqlCommand com = new SqlCommand(query, conn);
                 com.ExecuteNonQuery();
                 conn.Close();
+                conn.Open();
+                query = "INSERT INTO Coursemapping (course_id,faculty_id) VALUES ('" + txtbox_cid.Text + "','"+ DropDownList1.SelectedValue.Trim() + "')";
+                com = new SqlCommand(query, conn);
+                com.ExecuteNonQuery();
+                conn.Close();
                 Response.Redirect("Admin.aspx");
+            }
+        }
+        protected void btn_logout_Click(object sender, EventArgs e)
+        {
+            if (Session["New"] != null)
+            {
+                Session["New"] = null;
+                Response.Redirect("Login_page.aspx");
             }
         }
     }

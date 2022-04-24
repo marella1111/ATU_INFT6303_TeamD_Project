@@ -77,7 +77,7 @@
                 </td>
                 <td>
                     <br />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="DropDownList1" ErrorMessage="* Department should not be empty" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="DropDownList1" ErrorMessage="* Department should not be empty" ForeColor="Red" InitialValue="select"></asp:RequiredFieldValidator>
                     <br />
                     <br />
                 </td>

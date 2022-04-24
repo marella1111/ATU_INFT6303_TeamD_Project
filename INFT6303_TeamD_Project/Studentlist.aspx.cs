@@ -25,14 +25,16 @@ namespace INFT6303_TeamD_Project
             }
             else
             {
+                Label2.Text = Session["Role"].ToString();
             }
         }
 
-        protected void GridView1_SelectedIndexChanged(object sender, GridViewCommandEventArgs e)
+        protected void btn_logout_Click(object sender, EventArgs e)
         {
-            if(e.CommandName == "Delete")
+            if (Session["New"] != null)
             {
-                Response.Write("Error");     
+                Session["New"] = null;
+                Response.Redirect("Login_page.aspx");
             }
         }
     }

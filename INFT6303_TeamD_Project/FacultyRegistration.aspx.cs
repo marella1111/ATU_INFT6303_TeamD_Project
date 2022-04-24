@@ -27,6 +27,7 @@ namespace INFT6303_TeamD_Project
             }
             else
             {
+                Label3.Text = Session["Role"].ToString();
             }
         }
 
@@ -87,6 +88,15 @@ namespace INFT6303_TeamD_Project
                 com.ExecuteNonQuery();
                 conn.Close();
                 Response.Redirect("Admin.aspx");
+            }
+        }
+
+        protected void btn_logout_Click(object sender, EventArgs e)
+        {
+            if (Session["New"] != null)
+            {
+                Session["New"] = null;
+                Response.Redirect("Login_page.aspx");
             }
         }
     }

@@ -38,7 +38,7 @@ namespace INFT6303_TeamD_Project
                     SqlDataReader sdr = cmd.ExecuteReader();
                     if (sdr.Read())
                     {
-                       Label1.Text= Session["Name"].ToString();
+                       Label1.Text= sdr.GetValue(2).ToString();
                        Label2.Text= sdr.GetValue(1).ToString();
                        Label3.Text= sdr.GetValue(3).ToString();
                        Label4.Text=sdr.GetValue(5).ToString();
