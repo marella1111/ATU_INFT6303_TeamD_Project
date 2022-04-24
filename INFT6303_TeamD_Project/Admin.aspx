@@ -18,19 +18,19 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Faculty</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item">Add Faculty</a>
-                            <a class="dropdown-item">Manage Faculty</a>
+                            <a class="dropdown-item" href="FacultyRegistration.aspx">Add Faculty</a>
+                            <a class="dropdown-item" href="FacultyList.aspx">Manage Faculty</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item">Add Course</a>
-                            <a class="dropdown-item">Manage Courses</a>
+                            <a class="dropdown-item" href="Course.aspx">Add Course</a>
+                            <a class="dropdown-item" href="CourseList.aspx">Manage Courses</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">View Feedback</a>
+                        <a class="nav-link" href="AdminFeedback.aspx">View Feedback</a>
                     </li>
                    <li class="nav-item" style="right: -10px;position: absolute;bottom: 10px;">
                        <asp:Button ID="btn_logout" runat="server" Text="Log Out" OnClick="btn_logout_Click" />

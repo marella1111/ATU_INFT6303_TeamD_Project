@@ -68,15 +68,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin.aspx" />
+    <Content Include="AdminFeedback.aspx" />
     <Content Include="App_Data\Feedback.mdf" />
     <Content Include="App_Data\Feedback_log.ldf">
       <DependentUpon>Feedback.mdf</DependentUpon>
     </Content>
+    <Content Include="Course.aspx" />
+    <Content Include="CourseList.aspx" />
+    <Content Include="CourseUpdate.aspx" />
     <Content Include="Css\style.css" />
     <Content Include="Faculty.aspx" />
     <Content Include="FacultyFeedback.aspx" />
+    <Content Include="FacultyList.aspx" />
     <Content Include="FacultyProfile.aspx" />
+    <Content Include="FacultyRegistration.aspx" />
     <Content Include="FacultyUpdate.aspx" />
+    <Content Include="FeedbackForm.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login_page.aspx" />
     <Content Include="Registration.aspx" />
@@ -96,6 +103,34 @@
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminFeedback.aspx.cs">
+      <DependentUpon>AdminFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminFeedback.aspx.designer.cs">
+      <DependentUpon>AdminFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Course.aspx.cs">
+      <DependentUpon>Course.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Course.aspx.designer.cs">
+      <DependentUpon>Course.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseList.aspx.cs">
+      <DependentUpon>CourseList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseList.aspx.designer.cs">
+      <DependentUpon>CourseList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseUpdate.aspx.cs">
+      <DependentUpon>CourseUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseUpdate.aspx.designer.cs">
+      <DependentUpon>CourseUpdate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Faculty.aspx.cs">
       <DependentUpon>Faculty.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -110,6 +145,13 @@
     <Compile Include="FacultyFeedback.aspx.designer.cs">
       <DependentUpon>FacultyFeedback.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FacultyList.aspx.cs">
+      <DependentUpon>FacultyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FacultyList.aspx.designer.cs">
+      <DependentUpon>FacultyList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FacultyProfile.aspx.cs">
       <DependentUpon>FacultyProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -117,12 +159,26 @@
     <Compile Include="FacultyProfile.aspx.designer.cs">
       <DependentUpon>FacultyProfile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FacultyRegistration.aspx.cs">
+      <DependentUpon>FacultyRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FacultyRegistration.aspx.designer.cs">
+      <DependentUpon>FacultyRegistration.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FacultyUpdate.aspx.cs">
       <DependentUpon>FacultyUpdate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="FacultyUpdate.aspx.designer.cs">
       <DependentUpon>FacultyUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeedbackForm.aspx.cs">
+      <DependentUpon>FeedbackForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeedbackForm.aspx.designer.cs">
+      <DependentUpon>FeedbackForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

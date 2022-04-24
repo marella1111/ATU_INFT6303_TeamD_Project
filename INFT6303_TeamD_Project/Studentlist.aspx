@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Studentlist.aspx.cs" Inherits="INFT6303_TeamD_Project.Studentlist" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="student_id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="student_id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnRowCommand="GridView1_SelectedIndexChanged">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:BoundField DataField="student_id" HeaderText="student_id" ReadOnly="True" SortExpression="student_id" />
@@ -24,5 +24,11 @@
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [student_id], [name], [email_id], [address], [phone_no], [department], [courses_registered] FROM [Student]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1"
+        runat="server"
+        ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+        SelectCommand="SELECT [student_id], [name], [email_id], [address], [phone_no], [department], [courses_registered] FROM [Student]"
+        DeleteCommand="DELETE FROM [Student] WHERE [student_id] = @student_id">
+    </asp:SqlDataSource>
+    <br />
 </asp:Content>
