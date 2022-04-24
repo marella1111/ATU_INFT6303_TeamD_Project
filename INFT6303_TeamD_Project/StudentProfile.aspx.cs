@@ -29,6 +29,8 @@ namespace INFT6303_TeamD_Project
             }
             else
             {
+                Label8.Text = Session["Name"].ToString();
+                Label9.Text = Session["Role"].ToString();
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                 try
                 {
@@ -60,9 +62,14 @@ namespace INFT6303_TeamD_Project
             Response.Redirect("StudentUpdate.aspx");
         }
 
-        protected void Btn_back_Click(object sender, EventArgs e)
+        protected void btn_logout_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Student.aspx");
+            if (Session["New"] != null)
+            {
+                Session["New"] = null;
+                Response.Redirect("Login_page.aspx");
+            }
         }
+
     }
 }

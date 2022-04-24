@@ -29,6 +29,8 @@ namespace INFT6303_TeamD_Project
             }
             else
             {
+                Label1.Text = Session["Name"].ToString();
+                Label2.Text = Session["Role"].ToString();
                 if (!IsPostBack)
                 {
                     SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
@@ -62,26 +64,9 @@ namespace INFT6303_TeamD_Project
             }
 
         }
-
-     /*   private string getpassword()
-        {
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-            conn.Open();
-            string qry = "select * from Student where student_id='" + Session["New"].ToString().Replace(" ", "") + "'";
-            SqlCommand cmd = new SqlCommand(qry, conn);
-            SqlDataReader rd = cmd.ExecuteReader();
-            while (rd.Read())
-            {
-                password = rd["password"].ToString().Replace(" ", "");
-            }
-            conn.Close();
-            return password;
-        }*/
-
+      
         protected void Button1_Click(object sender, EventArgs e)
         {
-           // if (String.Equals(getpassword(), txtbox_oldpassword.Text.ToString().Replace(" ", "")))
-            //{
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                 conn.Open();
                 String qry;
@@ -93,11 +78,15 @@ namespace INFT6303_TeamD_Project
                 qry_n.ExecuteNonQuery();
                 conn.Close();
                 Response.Redirect("StudentProfile.aspx");
-           /* }
-            else
+        }
+
+        protected void btn_logout_Click(object sender, EventArgs e)
+        {
+            if (Session["New"] != null)
             {
-                Response.Write("Enter correct password");
-            }*/
+                Session["New"] = null;
+                Response.Redirect("Login_page.aspx");
+            }
         }
     }
 }

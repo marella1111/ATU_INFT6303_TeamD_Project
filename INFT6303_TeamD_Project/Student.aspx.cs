@@ -27,6 +27,7 @@ namespace INFT6303_TeamD_Project
             {
                 Label1.Text = Session["Name"].ToString();
                 Label2.Text = Session["Role"].ToString();
+                Label3.Text = Session["Name"].ToString();
             }
         }
 
