@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="FacultyFeedbackForm.aspx.cs" Inherits="INFT6303_TeamD_Project.FacultyFeedbackForm" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <div class="leftmargin">
      <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-left">
             <a class="navbar-brand" style="color: azure">
                 <asp:Label ID="Label1" runat="server"></asp:Label></br><asp:Label ID="Label2" runat="server"></asp:Label></a>
@@ -36,6 +36,7 @@
             </td>
         </tr>
     </table>
-    <asp:Button ID="btn_submit" runat="server" Text="Submit" OnClick="btn_submit_Click" />
+    <asp:Button ID="btn_submit" runat="server" Text="Submit" class="btn btn-primary" OnClick="btn_submit_Click" />
     <br />
+        </div>
 </asp:Content>

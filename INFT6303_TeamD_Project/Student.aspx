@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div>
+    <div class="leftmargin">
         <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-left">
             <a class="navbar-brand" style="color: azure">
                 <asp:Label ID="Label1" runat="server"></asp:Label></br><asp:Label ID="Label2" runat="server"></asp:Label></a>

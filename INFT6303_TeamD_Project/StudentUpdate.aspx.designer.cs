@@ -60,13 +60,13 @@ namespace INFT6303_TeamD_Project
         protected global::System.Web.UI.WebControls.TextBox txtbox_name;
 
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// RequiredFieldValidator7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
 
         /// <summary>
         /// txtbox_email control.

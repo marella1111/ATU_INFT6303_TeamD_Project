@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="FacultyRegistration.aspx.cs" Inherits="INFT6303_TeamD_Project.FacultyRegistration" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="leftmargin">
 
-    
         <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-left">
             <a class="navbar-brand" style="color: azure">Welcome
                 <asp:Label ID="Label3" runat="server"></asp:Label></a>
@@ -40,102 +40,121 @@
             </div>
         </nav>
 
-    Registration Form<br />
-    <table class="auto-style1">
-        <tr>
-            <td class="auto-style3">Faculty ID</td>
-            <td class="auto-style5">
-                <asp:TextBox ID="txtbox_tno" runat="server" Width="290px"></asp:TextBox>
-            </td>
-            <td>
-                <br />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtbox_tno" ErrorMessage="* Faculty ID should not be empty" ForeColor="Red"></asp:RequiredFieldValidator>
-                <br />
-                <asp:Label ID="Label2" runat="server"></asp:Label>
-                <br />
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3">Full Name</td>
-            <td class="auto-style5">
-                <asp:TextBox ID="txtbox_name" runat="server" Width="290px"></asp:TextBox>
-            </td>
-            <td>
-                <br />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtbox_name" ErrorMessage="* Name should not be empty" ForeColor="Red"></asp:RequiredFieldValidator>
-                <br />
-                <br />
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3">Email ID</td>
-            <td class="auto-style5">
-                <asp:TextBox ID="txtbox_email" runat="server" Width="290px"></asp:TextBox>
-            </td>
-            <td>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtbox_email" ErrorMessage="* Email should not be empty" ForeColor="Red"></asp:RequiredFieldValidator>
-                &nbsp;<br />
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtbox_email" ErrorMessage="* Email not valid format" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-                <br />
-                <asp:Label ID="Label1" runat="server"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3">Phone Number</td>
-            <td class="auto-style5">
-                <asp:TextBox ID="txtbox_phnno" runat="server" Width="290px"></asp:TextBox>
-            </td>
-            <td>
-                <br />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtbox_phnno" ErrorMessage="* Phone Number should not be empty" ForeColor="Red"></asp:RequiredFieldValidator>
-                <br />
-                <br />
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3">Address</td>
-            <td class="auto-style5">
-                <asp:TextBox ID="txtbox_address" runat="server" TextMode="MultiLine" Width="290px"></asp:TextBox>
-            </td>
-            <td>
-                <br />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtbox_address" ErrorMessage="* Address should not be empty" ForeColor="Red"></asp:RequiredFieldValidator>
-                <br />
-                <br />
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3">Department</td>
-            <td class="auto-style5">
-                <asp:DropDownList ID="DropDownList1" runat="server" Width="290px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True">
-                    <asp:ListItem>select</asp:ListItem>
-                    <asp:ListItem>NT</asp:ListItem>
-                    <asp:ListItem>IT</asp:ListItem>
-                </asp:DropDownList>
-            </td>
-            <td>
-                <br />
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="DropDownList1" ErrorMessage="* Department should not be empty" ForeColor="Red"></asp:RequiredFieldValidator>
-                <br />
-                <br />
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style4">Courses Teaching </td>
-            <td class="auto-style5">
-                <asp:ListBox ID="ListBox1" runat="server" Width="290px" SelectionMode="Multiple"></asp:ListBox>
-            </td>
-            <td>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="ListBox1" ErrorMessage="* Courses should not be empty" ForeColor="Red"></asp:RequiredFieldValidator>
-            </td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style5">
-                <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
-                <input id="Reset1" type="reset" value="reset" /></td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
+        <div class='bold-line'></div>
+        <div class='container'>
+            <div class='window'>
+                <div class="overlay" style="height: 850px;">
+                </div>
+                <div class='content'>
+                    <div class='welcome'>Faculty Form</div>
+                    <div class='subtitle'>Form to add faculty details</div>
 
+                    <div class='input-fields'>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label class="auto-style1">Faculty ID</label></td>
+                                <td>
+                                    <asp:TextBox ID="txtbox_tno" runat="server" class="input-line" Width="240px"></asp:TextBox>
+                                </td>
+                            </tr>
+                        </table>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtbox_tno" ErrorMessage="* Faculty ID should not be empty" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <br />
+                        <asp:Label ID="Label2" runat="server"></asp:Label>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label class="auto-style1">Full name</label></td>
+                                <td>
+                                    <asp:TextBox ID="txtbox_name" runat="server" class="input-line" Width="240px"></asp:TextBox>
+                                </td>
+                            </tr>
+                        </table>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtbox_name" ErrorMessage="* Name should not be empty" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label class="auto-style1">Email ID</label></td>
+                                <td>
+                                    <asp:TextBox ID="txtbox_email" runat="server" class="input-line" Width="240px"></asp:TextBox>
+                                </td>
+                            </tr>
+                        </table>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtbox_email" ErrorMessage="* Email should not be empty" ForeColor="Red"></asp:RequiredFieldValidator>
+                        &nbsp;<br />
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtbox_email" ErrorMessage="* Email not valid format" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                        <br />
+                        <asp:Label ID="Label1" runat="server"></asp:Label>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label class="auto-style1">Phone Number</label></td>
+                                <td>
+                                    <asp:TextBox ID="txtbox_phnno" runat="server" class="input-line" Width="240px"></asp:TextBox>
+                                </td>
+                            </tr>
+                        </table>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtbox_phnno" ErrorMessage="* Phone Number should not be empty" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <br />
+                        <table>
+                            <tr>
+                                <td>
+                                    <label class="auto-style1">Address</label></td>
+                                <td>
+                                    <asp:TextBox ID="txtbox_address" TextMode="MultiLine" runat="server" class="input-line" Width="240px"></asp:TextBox>
+                                </td>
+                            </tr>
+                        </table>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtbox_address" ErrorMessage="* Address should not be empty" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <br />
+                        <table>
+                            <tr>
+                                <td>
+                                    <label class="auto-style1">Departments</label></td>
+                                <td>
+                                    <asp:DropDownList ID="DropDownList1" runat="server" class="input-line" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True" Style="height: 50px; width: 240px;">
+                                        <asp:ListItem style="color: black;">select department</asp:ListItem>
+                                        <asp:ListItem Value="NT" style="color: black;">NT</asp:ListItem>
+                                        <asp:ListItem Value="IT" style="color: black;">IT</asp:ListItem>
+                                    </asp:DropDownList>
+                                </td>
+                            </tr>
+                        </table>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="DropDownList1" ErrorMessage="* Department should not be empty" ForeColor="Red" InitialValue="select department"></asp:RequiredFieldValidator>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label class="auto-style1">Courses Registered</label></td>
+                                <td>
+                                    <asp:ListBox ID="ListBox1" runat="server" Width="240px" class="input-line" SelectionMode="Multiple"></asp:ListBox>
+                                </td>
+                            </tr>
+                        </table>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="ListBox1" ErrorMessage="* Courses should not be empty" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <br />
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <asp:Button ID="Button1" runat="server" Text="Register" class="ghost-round" OnClick="Button1_Click" /></td>
+                                <td>
+                                    <input id="Reset1" type="reset" class='ghost-round' value="reset" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </asp:Content>
+<asp:Content ID="Content3" runat="server" contentplaceholderid="head">
+    <style type="text/css">
+        .auto-style1 {
+            width: 90px;
+        }
+    </style>
+</asp:Content>
+

@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="CourseList.aspx.cs" Inherits="INFT6303_TeamD_Project.CourseList" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <div class="leftmargin">
     <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-left">
         <a class="navbar-brand" style="color: azure">Welcome
                 <asp:Label ID="Label2" runat="server"></asp:Label></a>
@@ -78,5 +78,5 @@
             <asp:Parameter Name="course_id" />
         </DeleteParameters>
     </asp:SqlDataSource>
-
+</div>
 </asp:Content>

@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="StudentFeedback.aspx.cs" Inherits="INFT6303_TeamD_Project.StudentFeedback" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+<div class="leftmargin">
     <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-left">
         <a class="navbar-brand" style="color: azure">
             <asp:Label ID="Label2" runat="server"></asp:Label></br><asp:Label ID="Label3" runat="server"></asp:Label></a>
@@ -119,11 +119,12 @@
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style6">
-                <asp:Button ID="Btn_submit" runat="server" OnClick="Btn_submit_Click" Text="Submit" />
+                <asp:Button ID="Btn_submit" runat="server" OnClick="Btn_submit_Click" CssClass="btn btn-primary" Text="Submit" />
             </td>
             <td>&nbsp;</td>
         </tr>
     </table>
+    </div>
 </asp:Content>
 <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="head">
     <style type="text/css">

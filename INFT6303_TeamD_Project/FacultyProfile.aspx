@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FacultyProfile.aspx.cs" Inherits="INFT6303_TeamD_Project.FacultyProfile" MasterPageFile="~/MasterPage.Master" %> 
 
 <asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+<div class="leftmargin">
      <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-left">
             <a class="navbar-brand" style="color: azure">
                 <asp:Label ID="Label8" runat="server"></asp:Label></br><asp:Label ID="Label9" runat="server"></asp:Label></a>
@@ -53,5 +53,6 @@
       <asp:Button ID="btn_update" runat="server" Text="Update Profile" class="btn btn-primary" OnClick="btn_update_Click" />
   </div>
 </div>
+    </div>
 </asp:Content>
 

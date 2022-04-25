@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FacultyFeedback.aspx.cs" Inherits="INFT6303_TeamD_Project.FacultyFeedback" MasterPageFile="~/MasterPage.Master" %>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
+    <div class="leftmargin">
 
         <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-left">
             <a class="navbar-brand" style="color: azure">

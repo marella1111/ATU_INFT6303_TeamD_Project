@@ -37,11 +37,11 @@ namespace INFT6303_TeamD_Project
                     conn.Open();
                     string qry = "";
                     if (DropDownList1.SelectedValue == "Admin")
-                        qry = "SELECT * FROM Admin WHERE Username='" + email_textbox.Text.Replace(" ", "") + "' AND Password='" + password_textbox.Text.Replace(" ", "") + "'";
+                        qry = "SELECT * FROM Admin WHERE Username='" + email.Text.Trim() + "' AND Password='" + password.Text.Trim() + "'";
                     else if (DropDownList1.SelectedValue == "Faculty")
-                        qry = "SELECT * FROM Faculty WHERE email_id='" + email_textbox.Text.Replace(" ", "") + "' AND password='" + password_textbox.Text.Replace(" ", "") + "'";
+                        qry = "SELECT * FROM Faculty WHERE email_id='" + email.Text.Trim() + "' AND password='" + password.Text.Trim() + "'";
                     else
-                        qry = "SELECT * FROM Student WHERE email_id='" + email_textbox.Text.Replace(" ", "") + "' AND password='" + password_textbox.Text.Replace(" ", "") + "'";
+                        qry = "SELECT * FROM Student WHERE email_id='" + email.Text.Trim() + "' AND password='" + password.Text.Trim() + "'";
                     SqlCommand cmd = new SqlCommand(qry, conn);
                     SqlDataReader sdr = cmd.ExecuteReader();
                     if (sdr.Read())

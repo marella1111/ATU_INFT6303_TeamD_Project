@@ -24,13 +24,13 @@ namespace INFT6303_TeamD_Project
         protected global::System.Web.UI.WebControls.TextBox txtbox_tno;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// RequiredFieldValidator3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
 
         /// <summary>
         /// Label2 control.
@@ -51,13 +51,13 @@ namespace INFT6303_TeamD_Project
         protected global::System.Web.UI.WebControls.TextBox txtbox_name;
 
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// RequiredFieldValidator7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
 
         /// <summary>
         /// txtbox_email control.
@@ -69,13 +69,13 @@ namespace INFT6303_TeamD_Project
         protected global::System.Web.UI.WebControls.TextBox txtbox_email;
 
         /// <summary>
-        /// RequiredFieldValidator3 control.
+        /// RequiredFieldValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
 
         /// <summary>
         /// RegularExpressionValidator1 control.
@@ -159,13 +159,13 @@ namespace INFT6303_TeamD_Project
         protected global::System.Web.UI.WebControls.ListBox ListBox1;
 
         /// <summary>
-        /// RequiredFieldValidator7 control.
+        /// RequiredFieldValidator8 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator8;
 
         /// <summary>
         /// txtbox_password control.
@@ -177,13 +177,13 @@ namespace INFT6303_TeamD_Project
         protected global::System.Web.UI.WebControls.TextBox txtbox_password;
 
         /// <summary>
-        /// RequiredFieldValidator8 control.
+        /// RequiredFieldValidator2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator8;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
 
         /// <summary>
         /// txtbox_retypepassword control.
@@ -220,5 +220,14 @@ namespace INFT6303_TeamD_Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
+
+        /// <summary>
+        /// LinkButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
     }
 }
