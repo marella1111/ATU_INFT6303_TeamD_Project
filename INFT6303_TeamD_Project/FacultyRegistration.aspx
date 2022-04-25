@@ -113,7 +113,7 @@
                                 <td>
                                     <label class="auto-style1">Departments</label></td>
                                 <td>
-                                    <asp:DropDownList ID="DropDownList1" runat="server" class="input-line" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True" Style="height: 50px; width: 240px;">
+                                    <asp:DropDownList ID="DropDownList1" runat="server" class="input-line" AutoPostBack="True" Style="height: 50px; width: 240px;">
                                         <asp:ListItem style="color: black;">select department</asp:ListItem>
                                         <asp:ListItem Value="NT" style="color: black;">NT</asp:ListItem>
                                         <asp:ListItem Value="IT" style="color: black;">IT</asp:ListItem>
@@ -122,17 +122,7 @@
                             </tr>
                         </table>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="DropDownList1" ErrorMessage="* Department should not be empty" ForeColor="Red" InitialValue="select department"></asp:RequiredFieldValidator>
-                        <table>
-                            <tr>
-                                <td>
-                                    <label class="auto-style1">Courses Registered</label></td>
-                                <td>
-                                    <asp:ListBox ID="ListBox1" runat="server" Width="240px" class="input-line" SelectionMode="Multiple"></asp:ListBox>
-                                </td>
-                            </tr>
-                        </table>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="ListBox1" ErrorMessage="* Courses should not be empty" ForeColor="Red"></asp:RequiredFieldValidator>
-                        <br />
+
                     </div>
                     <div>
                         <table>

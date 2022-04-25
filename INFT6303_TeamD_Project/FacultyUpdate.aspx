@@ -100,15 +100,6 @@
                                 </td>
                             </tr>
                         </table>
-						<table>
-                            <tr>
-                                <td>
-                                    <label class="auto-style1">Courses Registered</label></td>
-                                <td>
-                                    <asp:TextBox ID="TextBox1" runat="server" Width="240px" class="input-line"></asp:TextBox>
-                                </td>
-                            </tr>
-                        </table>
                        <br />
 					   <table>
                         <tr>

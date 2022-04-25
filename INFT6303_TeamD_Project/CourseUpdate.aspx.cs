@@ -89,9 +89,10 @@ namespace INFT6303_TeamD_Project
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            string courseId = Request.QueryString["id"];
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             conn.Open();
-            String qry = "UPDATE Course SET course_name='" + txtbox_name.Text.ToString() + "',course_desc='" + txtbox_desc.Text.ToString() + "'WHERE course_id='" + txtbox_cid.ToString().Trim() + "'";
+            String qry = "UPDATE Course SET course_name='" + txtbox_name.Text.ToString() + "',course_desc='" + txtbox_desc.Text.ToString() + "'WHERE course_id='" + courseId.Trim() + "'";
             SqlCommand qry_n = new SqlCommand(qry, conn);
             qry_n.ExecuteNonQuery();
             conn.Close();

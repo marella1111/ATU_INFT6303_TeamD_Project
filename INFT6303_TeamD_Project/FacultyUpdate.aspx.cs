@@ -47,10 +47,9 @@ namespace INFT6303_TeamD_Project
                             txtbox_address.Text = sdr.GetValue(4).ToString();
                             txtbox_phnno.Text = sdr.GetValue(5).ToString();
                             DropDownList1.SelectedValue = sdr.GetValue(6).ToString().Replace(" ", "");
-                            TextBox1.Text = sdr.GetValue(7).ToString();
+                            
                         }
                         txtbox_tno.Attributes["readonly"] = "readonly";
-                        TextBox1.Attributes["readonly"] = "readonly";
                         txtbox_email.Attributes["readonly"] = "readonly";
                         DropDownList1.Enabled = false;
                         conn.Close();

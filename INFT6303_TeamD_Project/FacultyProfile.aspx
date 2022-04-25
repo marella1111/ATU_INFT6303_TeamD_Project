@@ -44,8 +44,7 @@
     <h4 class="card-title">Academic Details</h4>
     <h5 class="card-title">Department</h5>
     <h6 class="card-subtitle mb-2 text-muted"><asp:Label ID="Label6" runat="server"></asp:Label></h6>
-    <h5 class="card-title">Courses Registered</h5>
-    <h6 class="card-subtitle mb-2 text-muted"><asp:Label ID="Label7" runat="server"></asp:Label></h6>
+    
   </div>
 </div>
 <div class="card" style="width: 50rem;">

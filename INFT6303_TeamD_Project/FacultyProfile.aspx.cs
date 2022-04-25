@@ -45,7 +45,15 @@ namespace INFT6303_TeamD_Project
                         Label4.Text = sdr.GetValue(5).ToString();
                         Label5.Text = sdr.GetValue(4).ToString();
                         Label6.Text = sdr.GetValue(6).ToString();
-                        Label7.Text = sdr.GetValue(7).ToString();
+                    }
+                    conn.Close();
+                    conn.Open();
+                     qry = "SELECT * FROM Coursemapping WHERE faculty_id='" + Session["New"].ToString() + "'";
+                     cmd = new SqlCommand(qry, conn);
+                     sdr = cmd.ExecuteReader();
+                    if (sdr.Read())
+                    {
+                        Response.Write(sdr.GetValue(0));
                     }
                     conn.Close();
                 }

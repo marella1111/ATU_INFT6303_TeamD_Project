@@ -31,25 +31,7 @@ namespace INFT6303_TeamD_Project
             }
         }
 
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-            try
-            {
-                conn.Open();
-                string qry = "SELECT * FROM Course WHERE department='" + DropDownList1.SelectedValue.ToString().Replace(" ", "") + "'";
-                SqlCommand cmd = new SqlCommand(qry, conn);
-                ListBox1.DataTextField = "course_name";
-                ListBox1.DataValueField = "course_name";
-                ListBox1.DataSource = cmd.ExecuteReader();
-                ListBox1.DataBind();
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                Response.Write(ex.Message);
-            }
-        }
+       
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -78,12 +60,8 @@ namespace INFT6303_TeamD_Project
                 Label1.Visible = false;
                 Label2.Visible = false;
                 conn.Open();
-                var selected = ListBox1.GetSelectedIndices().ToList();
-                var selectedValues = (from c in selected
-                                      select ListBox1.Items[c].Value.Replace(" ", "")).ToList();
-                string result = string.Join(",", selectedValues);
-                string password = txtbox_name.Text.Substring(0,3)+"@"+ txtbox_tno.Text.Substring(txtbox_tno.Text.Length - 3);
-                string query = "INSERT INTO Faculty (faculty_id,name,email_id,address,phone_no,department,courses_tought,password) VALUES ('" + txtbox_tno.Text + "','" + txtbox_name.Text + "','" + txtbox_email.Text + "','" + txtbox_address.Text + "','" + txtbox_phnno.Text + "','" + DropDownList1.SelectedItem.ToString() + "','" + result + "','" + password.Trim() + "')";
+                string password = txtbox_name.Text.Substring(0, 3) + "@" + txtbox_tno.Text.Substring(txtbox_tno.Text.Length - 3);
+                string query = "INSERT INTO Faculty (faculty_id,name,email_id,address,phone_no,department,password) VALUES ('" + txtbox_tno.Text + "','" + txtbox_name.Text + "','" + txtbox_email.Text + "','" + txtbox_address.Text + "','" + txtbox_phnno.Text + "','" + DropDownList1.SelectedItem.ToString()  + "','" + password.Trim() + "')";
                 SqlCommand com = new SqlCommand(query, conn);
                 com.ExecuteNonQuery();
                 conn.Close();

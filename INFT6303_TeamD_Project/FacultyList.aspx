@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="FacultyList.aspx.cs" Inherits="INFT6303_TeamD_Project.FacultyList" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<div class="leftmargin">
+    <div class="leftmargin">
     
         <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-left">
             <a class="navbar-brand" style="color: azure">Welcome
@@ -51,7 +51,6 @@
             <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" />
             <asp:BoundField DataField="phone_no" HeaderText="phone_no" SortExpression="phone_no" />
             <asp:BoundField DataField="department" HeaderText="department" SortExpression="department" />
-            <asp:BoundField DataField="courses_tought" HeaderText="courses_tought" SortExpression="courses_tought" />
             <asp:ButtonField ButtonType="Button" CommandName="Delete" Text="Delete" />
         </Columns>
         <EditRowStyle BackColor="#2461BF" />
@@ -68,7 +67,11 @@
     <asp:SqlDataSource ID="SqlDataSource1" 
         runat="server" 
         ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-        SelectCommand="SELECT [faculty_id], [name], [email_id], [address], [phone_no], [department], [courses_tought] FROM [Faculty]"
-        DeleteCommand="DELETE FROM [Faculty] WHERE [faculty_id] = @faculty_id"></asp:SqlDataSource>
+        SelectCommand="SELECT [faculty_id], [name], [email_id], [address], [phone_no], [department] FROM [Faculty]"
+        DeleteCommand="DELETE FROM [Faculty] WHERE [faculty_id] = @faculty_id">
+        <DeleteParameters>
+            <asp:Parameter Name="faculty_id" />
+        </DeleteParameters>
+        </asp:SqlDataSource>
 </div>
 </asp:Content>

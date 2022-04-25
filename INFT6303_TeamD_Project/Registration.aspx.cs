@@ -82,7 +82,7 @@ namespace INFT6303_TeamD_Project
                 conn.Open();
                 var selected = ListBox1.GetSelectedIndices().ToList();
                 var selectedValues = (from c in selected
-                                      select ListBox1.Items[c].Value.Replace(" ","")).ToList();
+                                      select ListBox1.Items[c].Value.Trim()).ToList();
                 string result = string.Join(",", selectedValues);
                 string query = "INSERT INTO Student (student_id,name,email_id,address,phone_no,password,department,courses_registered) VALUES ('" + txtbox_tno.Text + "','" + txtbox_name.Text + "','" + txtbox_email.Text + "','" + txtbox_address.Text + "','" + txtbox_phnno.Text + "','" + txtbox_password.Text + "','" + DropDownList1.SelectedItem.ToString() + "','" + result + "')";
                 SqlCommand com = new SqlCommand(query, conn);
