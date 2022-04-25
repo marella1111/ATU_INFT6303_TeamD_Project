@@ -50,7 +50,7 @@
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="password" ErrorMessage="*Password is Required to login" ForeColor="Red"></asp:RequiredFieldValidator>
                     <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Label ID="Label1" runat="server" Visible="False"></asp:Label>
+                    <asp:Label ID="Label1" runat="server"></asp:Label>
                     <br />
 
                 </div>

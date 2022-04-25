@@ -138,7 +138,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <asp:Button ID="Button1" runat="server" Text="Register" class="ghost-round" OnClick="Button1_Click" /></td>
+                                    <asp:Button ID="Button1" runat="server" Text="Update" class="ghost-round" OnClick="Button1_Click" /></td>
                                 <td>
                                     <input id="Reset1" type="reset" class='ghost-round' value="reset" /></td>
                             </tr>

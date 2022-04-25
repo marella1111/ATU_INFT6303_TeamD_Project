@@ -65,7 +65,7 @@ namespace INFT6303_TeamD_Project
                 SqlCommand com = new SqlCommand(query, conn);
                 com.ExecuteNonQuery();
                 conn.Close();
-                Response.Redirect("Admin.aspx");
+                Response.Redirect("FacultyList.aspx");
             }
         }
 

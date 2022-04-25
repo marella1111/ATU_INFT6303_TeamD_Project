@@ -79,6 +79,7 @@ namespace INFT6303_TeamD_Project
                 DropDownList1.DataValueField = "faculty_id";
                 DropDownList1.DataSource = cmd.ExecuteReader();
                 DropDownList1.DataBind();
+                DropDownList1.ForeColor = System.Drawing.Color.Black;
                 conn.Close();
             }
             catch (Exception ex)
@@ -97,11 +98,11 @@ namespace INFT6303_TeamD_Project
             qry_n.ExecuteNonQuery();
             conn.Close();
             conn.Open();
-            qry = "UPDATE Coursemapping SET faculty_id = '" + DropDownList1.SelectedValue.ToString() + "'WHERE course_id='" + txtbox_cid.ToString().Trim() + "'";
+            qry = "UPDATE Coursemapping SET faculty_id = '" + DropDownList1.SelectedValue.ToString() + "'WHERE course_id='" + courseId.Trim() + "'";
             qry_n = new SqlCommand(qry, conn);
             qry_n.ExecuteNonQuery();
             conn.Close();
-            Response.Redirect("FacultyProfile.aspx");
+            Response.Redirect("CourseList.aspx");
         }
 
         protected void btn_logout_Click(object sender, EventArgs e)

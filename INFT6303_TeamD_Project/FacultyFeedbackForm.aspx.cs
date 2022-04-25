@@ -38,14 +38,10 @@ namespace INFT6303_TeamD_Project
                         conn.Open();
                         string qry = "SELECT * FROM Coursemapping WHERE faculty_id='" + Session["New"].ToString().Trim() + "'";
                         SqlCommand cmd = new SqlCommand(qry, conn);
-                        SqlDataReader sdr = cmd.ExecuteReader();
-                        if (sdr.Read())
-                        {
                             DropDownList2.DataTextField = "course_id";
                             DropDownList2.DataValueField = "course_id";
                             DropDownList2.DataSource = cmd.ExecuteReader();
                             DropDownList2.DataBind();
-                        }
                         conn.Close();
                     }
                     catch (Exception ex)

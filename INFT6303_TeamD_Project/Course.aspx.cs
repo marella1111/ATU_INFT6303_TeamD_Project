@@ -43,6 +43,7 @@ namespace INFT6303_TeamD_Project
                 DropDownList1.DataValueField = "faculty_id";
                 DropDownList1.DataSource = cmd.ExecuteReader();
                 DropDownList1.DataBind();
+                DropDownList1.ForeColor = System.Drawing.Color.Black;
                 conn.Close();
             }
             catch (Exception ex)
@@ -83,7 +84,7 @@ namespace INFT6303_TeamD_Project
                 com = new SqlCommand(query, conn);
                 com.ExecuteNonQuery();
                 conn.Close();
-                Response.Redirect("Admin.aspx");
+                Response.Redirect("CourseList.aspx");
             }
         }
         protected void btn_logout_Click(object sender, EventArgs e)
